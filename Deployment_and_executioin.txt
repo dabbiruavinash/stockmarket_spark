@@ -1,0 +1,23 @@
+1.Set up infrastructure:
+
+Launch EC2 instances for Kafka brokers
+Configure Kafka cluster
+Set up AWS services (S3, Glue, Athena)
+
+2. Run the producer:
+python main.py --mode producer
+
+3. Run the consumer:
+python main.py --mode consumer
+
+4. Query data with Athena:
+SELECT * FROM stock_market_db.stock_prices LIMIT 10;
+
+Key Features:
+Modular OOP Design: Clean separation of concerns with different components in separate modules
+Scalable Processing: PySpark for distributed processing of stock market data
+Real-time Pipeline: Kafka for real-time data streaming
+AWS Integration: Boto3 for interacting with S3, Glue, and Athena
+Data Catalog: Glue Data Catalog for metadata management
+Query Interface: Athena for SQL queries on processed data
+Error Handling: Comprehensive logging and exception handling
